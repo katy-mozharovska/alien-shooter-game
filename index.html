@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrAwSer Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+</head>
+<body>
+    <div class="window-container">
+        <div class="window-header">
+            <span>BrAwSer</span>
+            <span class="close-btn">x</span>
+        </div>
+
+        <div class="game-content">
+            <div id="game-board" class="game-board">
+                <div id="game-over-banner" hidden>Game Over</div>
+                <div id="you-win-banner" hidden>YOU WIN!</div>
+            </div>
+
+            <div class="game-panel">
+                <div class="stat-group">
+                    <p>Score: <span id="score-display">0</span></p>
+                    <p>Speed: <span id="speed-display">1</span></p>
+                </div>
+
+                <div class="control-box">
+                    <label for="speed-select">Speed</label>
+                    <select id="speed-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <button id="start-btn">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

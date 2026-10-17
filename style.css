@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.window-container {
+    width: 650px;
+    background-color: #d6cdcd1e;
+    color: #000000;
+    border: 3px solid #000000;
+    box-shadow: 8px 8px 0px #333333;
+}
+
+.window-header {
+    background-color: #000000;
+    color: #a1a0a0;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.close-btn {
+    cursor: pointer;
+    padding: 0 5px;
+    background: #333;
+    border: 1px solid #a1a0a0;
+}
+
+.close-btn:hover {
+    background: #ff5555;
+}
+
+.game-content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background-color: #4d4d4d;
+}
+
+.game-board {
+    width: 320px;
+    height: 440px;
+    background-color: #000000;
+    border: 2px solid #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.ship {
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 4px;
+}
+
+.warrior {
+    border-color: #aaffff;
+    box-shadow: 0 0 8px #00ffff;
+}
+
+.enemy {
+    border-color: #ffaaaa;
+    box-shadow: 0 0 8px #ff4040;
+}
+
+.bullet {
+    background-color: #FFFF66;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #FFFF66;
+    z-index: 2;
+}
+
+.game-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat-group {
+    border: 2px solid #000000;
+    padding: 15px;
+    background-color: #ffffff77;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-box {
+    border: 2px solid #000000;
+    padding: 15px;
+    background-color: #ffffff77;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-box select {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    background-color: #ffffff77;
+}
+
+#start-btn {
+    background-color: #c67891;
+    color: #ffffff;
+    border: 2px solid #000000;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0px #000000;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+#start-btn:hover {
+    background-color: #0096b4;
+}
+
+#start-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #000000;
+}
+
+#game-over-banner,
+#you-win-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    width: 80%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid;
+    border-radius: 8px;
+
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#game-over-banner {
+    color: #FF4040;
+    border-color: #FF4040;
+    text-shadow: 0 0 8px #FF4040;
+    box-shadow: 0 0 15px rgba(255, 64, 64, 0.5);
+}
+
+#you-win-banner {
+    color: #00FFFF;
+    border-color: #00FFFF;
+    text-shadow: 0 0 8px #00FFFF;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+#game-over-banner[hidden],
+#you-win-banner[hidden] {
+    display: none;
+}
